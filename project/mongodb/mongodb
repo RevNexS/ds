@@ -1,0 +1,33 @@
+net start MongoDB
+Mongo
+use FresherBook
+show dbs
+db.dropDatabase()
+db.Books.insert({Name:”Geeta”,Lang:”Sanskrit”,Price:2500.00})
+
+db.createCollection(“Authors”,{capped: true, size:1000})
+var Bks=[
+{Name:”Quran”,Lang:”Urdu”,Price:3500},
+{Name:”Dhama Pad”,Lang:”Pali”,Price:3250},
+{Name:”Bible”,Lang:”English”,Price:3000}
+]
+db.Books.insert(Bks)
+db.Authors.drop()
+db.Books.find()
+db.Books.find().pretty()
+db.Books.find({Name:”Geeta”}).pretty()
+db.Books.find({Price:{$gt:3000}}).pretty()
+db.Books.find(Price:{$lt:{3000}}).pretty()
+db.Books.find(Lang:{$ne:{“English”}}).pretty()
+db.Books.find({Price:{$lte:3000}}).pretty()
+db.Books.update({Name:”Geeta”}, {$set:{Name:”Bhagvat Geeta”}})
+db.Books.update({Lang:”Hindi”},{$set:{Lang:”Sanskrit”}},{multi:true})
+db.Books.remove({Lang:”Sanskrit”})
+db.Books.remove({Lang:”Hindi”},1)
+db.Authors.remove({})
+db.Books.find({},{_id:0}).pretty()
+db.Books.find({},{_id:0,Name:1,Price:1}).pretty()
+db.Books.find().limit(2).pretty()
+db.Books.find().skip(2).pretty()
+db.Books.find({},{_id:0,Name:1).sort({Name:1}).pretty()
+db.Books.find({},{_id:0,Name:1).sort({Name:1}).pretty()

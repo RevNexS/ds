@@ -1,0 +1,34 @@
+Theory: 
+Analysis of variance (ANOVA) is a collection of statistical models and their associated estimation procedures 
+(such as the "variation" among and between groups) used to analyse the differences among group means in a 
+sample. 
+ANOVA was developed by statistician and evolutionary biologist Ronald Fisher. In the ANOVA setting, the 
+observed variance in a particular variable is partitioned into components attributable to different sources of 
+variation. In its simplest form, ANOVA provides a statistical test of whether the population means of several groups 
+are equal, and therefore generalizes the t-test to more than two groups. 
+ANOVA is useful for comparing (testing) three or more group means for statistical significance. It is conceptually 
+similar to multiple two-sample t-tests, but is more conservative, resulting in fewer type I errors, and is therefore 
+suited to a wide range of practical problems. 
+Experiment using R (Two-Way ANOVA) 
+A large company is assessing the difference in ‘satisfaction index’ of employees in finance, marketing & client-servicing 
+dept. Experience Level is also considered as one factor in study.(lt5 - less than 5,gt5 - greater than 5). Do the variance 
+testing ( ANOVA) for the same. 
+
+
+Satindex Dept Experience Satindex Dept Experience 
+75 FINANCE lt5 64 MARKETING gt5 
+56 FINANCE lt5 55 MARKETING gt5 
+72 FINANCE lt5 72 CS lt5
+66 FINANCE gt5 69 CS lt5 
+58 FINANCE gt5 60 CS gt5
+58 MARKETING lt5 62 CS gt5 
+63 MARKETING lt5 65 CS gt5 
+53 MARKETING lt5 
+
+Make
+
+
+• Loading the data and visualization 
+• Model building 
+• Model testing 
+• Inference/Prediction 
